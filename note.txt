@@ -1,0 +1,57 @@
+Server
+--------
+1. npm init
+2. npm i express
+3. create index.js filr
+        3.1. import express
+        3.2. serever create using express
+        3.3. set port to run the server
+
+nodemon
+        server used instead of node for automatic recompilation
+
+
+Basic shell commands in MongoDB
+--------------------------------
+* To list all database:
+         show dbs
+
+* To open a database
+         use databaseName
+
+* To list all collections inside a database
+         show collections
+        
+* To list the data inside a collections  
+         databaseName.collectionName.find()         ***
+
+* To access any single data from collection
+         databaseName.collectionName.findOne({key:value})
+         Eg: bankServer.users.findOne({acno:1000})              ***
+
+* To delete any single data from collection
+         databaseName.collectionName.deleteOne({key:value})     ***
+
+* To access data according to a condition
+         databaseName.collectionName.find({key:{codition}})
+         Eg: bankServer.users.find({balance:{$gt:4000}})      *** (query selector operators)
+
+* To add new data to collection  
+         databaseName.collectionName.insertOne({data})
+
+* To update data
+         updateOne({data to update})
+
+
+Server - MongoDB Integration(connect)
+-------------------------------------
+mongoose - library to integrate mongodb with node server
+connect() - method in mongoose library to connect
+
+
+json()   - a method in express used to convert all incoming json data into js
+
+
+Frontend - Server Integration
+-----------------------------
+cors - cross origin resourse sharing     
